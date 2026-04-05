@@ -15,7 +15,7 @@ It parses traffic-related input using **Lex & Yacc**, processes rules through a 
 
 ### 🔹 Core System
 
-* C Programming (Lex & Yacc)
+* C Programming (Flex & Bison)
 * Rule Engine Implementation
 * File Handling
 
