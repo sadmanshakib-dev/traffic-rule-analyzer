@@ -73,27 +73,42 @@ Traffic_Rule_Analyzer/
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run the Project
 
-### 🔹 Step 1: Compile (Lex & Yacc)
+### 🔹 Step 1: Navigate to Backend
 
 ```bash
-lex lexer.l
-yacc -d parser.y
-gcc lex.yy.c parser.tab.c main.c rule_engine.c -o analyzer
+cd backend
 ```
 
 ---
 
-### 🔹 Step 2: Run Analyzer
+### 🔹 Step 2: Generate Lexer & Parser (Optional)
 
 ```bash
-./analyzer
+flex lexer.l        # Optional (if lex.yy.c not already generated)
+bison -d parser.y   # Optional (if parser files not already generated)
 ```
 
 ---
 
-### 🔹 Step 3: Start Backend Server
+### 🔹 Step 3: Compile the Project
+
+```bash
+gcc lex.yy.c parser.tab.c main.c rule_engine.c -o traffic.exe
+```
+
+---
+
+### 🔹 Step 4: Go Back to Root Directory
+
+```bash
+cd ..
+```
+
+---
+
+### 🔹 Step 5: Start Backend Server
 
 ```bash
 node server.js
@@ -101,11 +116,20 @@ node server.js
 
 ---
 
-### 🔹 Step 4: Open Frontend
+### 🔹 Step 6: Open in Browser
 
-Open `index.html` in your browser.
+```
+http://localhost:3000
+```
 
 ---
+
+## ⚠️ Notes
+
+* Make sure **Flex & Bison (or Win Flex-Bison)** are installed
+* Ensure **Node.js** is installed
+* Run commands in terminal (VS Code / CMD / PowerShell)
+
 
 ## 📊 Output
 
