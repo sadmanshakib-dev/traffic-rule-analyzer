@@ -1,6 +1,6 @@
 # 🚦 Traffic Rule Analyzer
 
-A compiler-based system built using **Flex & Bison**, designed to analyze and validate traffic rules with an integrated **web-based interface** for visualization.
+A compiler-based system built using **Lex & Yacc (implemented using Flex & Bison)**, designed to analyze and validate traffic rules with an integrated **web-based interface** for visualization.
 
 ---
 
@@ -15,7 +15,7 @@ It parses traffic-related input using **Flex & Bison**, processes rules through 
 
 ### 🔹 Core System
 
-* C Programming (Flex & Bison)
+* C Programming **Lex & Yacc (implemented using Flex & Bison)**
 * Rule Engine Implementation
 * File Handling
 
@@ -141,7 +141,7 @@ http://localhost:3000
 
 ## 🎯 Learning Outcomes
 
-* Deep understanding of **Compiler Design (Flex & Bison)**
+* Deep understanding of **Compiler Design Lex & Yacc (implemented using Flex & Bison)**
 * Backend-Frontend integration
 * Real-world problem solving with C
 * Building full-stack hybrid systems
