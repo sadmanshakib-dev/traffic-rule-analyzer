@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Traffic Violation Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- PDF Library -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen flex items-center justify-center">
+
+<div class="max-w-5xl w-full p-10">
+
+<h1 class="text-4xl font-bold text-center text-white mb-10">
+🚨 Traffic Violation Dashboard
+</h1>
+
+<!-- Summary Cards -->
+
+<div class="grid grid-cols-2 gap-6 mb-8">
+
+<div class="bg-white p-6 rounded-xl shadow text-center">
+
+<h2 class="text-gray-500 text-sm">
+Total Cases
+</h2>
+
+<p id="totalCases" class="text-3xl font-bold text-blue-600">
+0
+</p>
+
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow text-center">
+
+<h2 class="text-gray-500 text-sm">
+Total Fine
+</h2>
+
+<p id="totalFine" class="text-3xl font-bold text-red-600">
+0 BDT
+</p>
+
+</div>
+
+</div>
+
+<!-- Report Section -->
+
+<div class="bg-white p-8 rounded-xl shadow-2xl">
+
+<h2 class="text-lg font-semibold text-gray-700 mb-4">
+📋 Violation Report
+</h2>
+
+<pre id="report"
+class="bg-gray-100 p-6 rounded-lg border whitespace-pre-wrap font-mono text-sm"></pre>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="flex justify-center gap-4 mt-8 flex-wrap">
+
+<a href="index.html"
+class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow font-semibold">
+
+⬅ Back
+
+</a>
+
+<a href="analytics_dashboard.html"
+class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow font-semibold">
+
+📊 Analytics
+
+</a>
+
+<button onclick="window.print()"
+class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow font-semibold">
+
+🖨 Print
+
+</button>
+
+<button onclick="downloadPDF()"
+class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg shadow font-semibold">
+
+⬇ Download PDF
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+/* report data load */
+
+const reportData = localStorage.getItem("traffic_report");
+
+/* যদি report না থাকে */
+
+if(!reportData){
+
+document.getElementById("report").textContent = "No report available.";
+
+}
+else{
+
+document.getElementById("report").textContent = reportData;
+
+/* Total Cases Count */
+
+const cases = reportData.match(/Case ID/g);
+
+let totalCases = 0;
+
+if(cases){
+totalCases = cases.length;
+}
+
+/* UI update */
+
+document.getElementById("totalCases").textContent = totalCases;
+
+/* IMPORTANT: analytics page এর জন্য save */
+
+localStorage.setItem("total_cases", totalCases);
+
+/* Total Fine Calculate */
+
+const fines = reportData.match(/Total Fine\s*:\s*(\d+)/g);
+
+let totalFine = 0;
+
+if(fines){
+
+fines.forEach(f => {
+
+const num = f.match(/\d+/);
+
+if(num){
+totalFine += parseInt(num[0]);
+}
+
+});
+
+}
+
+document.getElementById("totalFine").textContent = totalFine + " BDT";
+
+}
+
+
+/* ============================= */
+/* PDF DOWNLOAD FUNCTION */
+/* ============================= */
+
+function downloadPDF(){
+
+const { jsPDF } = window.jspdf;
+
+const doc = new jsPDF();
+
+const reportText = document.getElementById("report").textContent;
+
+doc.setFont("Courier");
+
+doc.setFontSize(12);
+
+doc.text("Traffic Rule Analyzer Report",20,20);
+
+doc.text("-------------------------------",20,25);
+
+doc.text(reportText,20,35);
+
+doc.save("Traffic_Violation_Report.pdf");
+
+}
+
+</script>
+
+</body>
+</html>

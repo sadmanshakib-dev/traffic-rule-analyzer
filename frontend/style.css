@@ -1,0 +1,297 @@
+/* ============================= */
+/* GLOBAL SETTINGS */
+/* ============================= */
+
+body{
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ============================= */
+/* LABEL STYLE */
+/* ============================= */
+
+.label{
+display:block;
+margin-bottom:6px;
+font-weight:600;
+font-size:14px;
+color:#374151;
+}
+
+
+/* ============================= */
+/* INPUT FIELDS */
+/* ============================= */
+
+.input{
+
+border:1px solid #d1d5db;
+padding:11px 12px;
+width:100%;
+border-radius:10px;
+
+background:#f9fafb;
+
+transition: all 0.25s ease;
+
+font-size:14px;
+
+}
+
+
+/* Focus effect */
+
+.input:focus{
+
+border-color:#2563eb;
+background:#ffffff;
+
+box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+
+outline:none;
+
+}
+
+
+/* Hover effect */
+
+.input:hover{
+
+border-color:#94a3b8;
+
+}
+
+
+/* Dropdown pointer */
+
+select.input{
+cursor:pointer;
+}
+
+
+/* ============================= */
+/* BUTTON BASE */
+/* ============================= */
+
+button{
+
+font-weight:600;
+letter-spacing:0.3px;
+
+transition:all 0.25s ease;
+
+cursor:pointer;
+
+}
+
+
+/* ============================= */
+/* ADD CASE BUTTON */
+/* ============================= */
+
+#addCase{
+
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:white;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+
+}
+
+#addCase:hover{
+
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+
+}
+
+
+/* ============================= */
+/* ANALYZE BUTTON */
+/* ============================= */
+
+button[type="submit"]{
+
+background:linear-gradient(135deg,#3b82f6,#2563eb);
+color:white;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+
+}
+
+button[type="submit"]:hover{
+
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,0.28);
+
+}
+
+
+/* ============================= */
+/* CASE PREVIEW BOX */
+/* ============================= */
+
+#caseList{
+
+font-family:monospace;
+background:#f3f4f6;
+
+border:1px solid #e5e7eb;
+
+border-radius:10px;
+
+padding:14px;
+
+line-height:1.4;
+
+}
+
+
+/* ============================= */
+/* CARD STYLE */
+/* ============================= */
+
+.card{
+
+background:white;
+
+border-radius:14px;
+
+box-shadow:
+0 10px 20px rgba(0,0,0,0.08),
+0 3px 6px rgba(0,0,0,0.05);
+
+padding:20px;
+
+}
+
+
+/* ============================= */
+/* GLASS CARD STYLE (NEW) */
+/* ============================= */
+
+.glass{
+
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(12px);
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,0.3);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+
+/* ============================= */
+/* INPUT MODERN EFFECT (NEW) */
+/* ============================= */
+
+.input{
+
+transition: all 0.2s ease;
+
+}
+
+.input:focus{
+
+transform:scale(1.02);
+
+}
+
+
+/* ============================= */
+/* BUTTON MODERN EFFECT (NEW) */
+/* ============================= */
+
+button{
+
+transition: all 0.25s ease;
+
+}
+
+button:hover{
+
+transform:translateY(-2px) scale(1.02);
+
+}
+
+
+/* ============================= */
+/* SCROLLBAR STYLE */
+/* ============================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#f1f5f9;
+}
+
+::-webkit-scrollbar-thumb{
+background:#94a3b8;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#64748b;
+}
+
+
+/* ============================= */
+/* PAGE FADE ANIMATION */
+/* ============================= */
+
+body{
+animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+/* ============================= */
+/* REPORT PAGE STYLE */
+/* ============================= */
+
+#report{
+
+background:#f8fafc;
+
+border-radius:10px;
+
+padding:15px;
+
+line-height:1.5;
+
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:1fr !important;
+}
+
+}

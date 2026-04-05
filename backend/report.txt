@@ -1,0 +1,20 @@
+========================================
+        TRAFFIC RULE ANALYZER REPORT
+========================================
+
+
+====================================
+Case ID : 1
+------------------------------------
+Vehicle : CAR
+Plate   : Dhaka-4
+
+Speed   : 80 km/h
+Limit   : 90 km/h
+
+Violations
+----------
+Night Driving Extra Charge - Fine: 1000 BDT
+
+Total Fine : 1000 BDT
+------------------------------------

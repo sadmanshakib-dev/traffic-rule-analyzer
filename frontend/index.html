@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Traffic Rule Analyzer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-screen flex items-center justify-center">
+
+<div class="max-w-6xl w-full p-8">
+
+<!-- Header -->
+
+<div class="text-center mb-12">
+
+<h1 class="text-5xl font-bold text-white tracking-wide">
+🚦 Traffic Rule Analyzer
+</h1>
+
+<p class="text-gray-300 mt-3 text-lg">
+Smart Traffic Violation Detection System
+</p>
+
+</div>
+
+
+<div class="bg-white/90 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-gray-200">
+
+<form id="trafficForm">
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<!-- ================= VEHICLE INFO ================= -->
+
+<div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl border shadow-sm">
+
+<h2 class="font-semibold text-gray-700 mb-6 text-lg">
+🚗 Vehicle Information
+</h2>
+
+<div class="space-y-5">
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Vehicle</label>
+<select id="vehicle" class="input">
+<option value="CAR">CAR</option>
+<option value="BIKE">BIKE</option>
+<option value="TRUCK">TRUCK</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Plate</label>
+<input id="plate" class="input" placeholder="Dhaka-1234">
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Speed</label>
+<input id="speed" type="number" class="input">
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Speed Limit</label>
+<input id="limit" type="number" class="input">
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= RULE CONDITIONS ================= -->
+
+<div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl border shadow-sm">
+
+<h2 class="font-semibold text-gray-700 mb-6 text-lg">
+🚨 Rule Conditions
+</h2>
+
+<div class="space-y-5">
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Signal</label>
+<select id="signal" class="input">
+<option value="GREEN">GREEN</option>
+<option value="RED">RED</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Seatbelt</label>
+<select id="seatbelt" class="input">
+<option value="ON">ON</option>
+<option value="OFF">OFF</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Helmet</label>
+<select id="helmet" class="input">
+<option value="ON">ON</option>
+<option value="OFF">OFF</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Zone</label>
+<select id="zone" class="input">
+<option value="NORMAL">NORMAL</option>
+<option value="HIGHWAY">HIGHWAY</option>
+<option value="SCHOOL">SCHOOL</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Time</label>
+<select id="time" class="input">
+<option value="DAY">DAY</option>
+<option value="NIGHT">NIGHT</option>
+</select>
+</div>
+
+<div>
+<label class="text-sm text-gray-600 font-medium">Alcohol</label>
+<select id="alcohol" class="input">
+<option value="NO">NO</option>
+<option value="YES">YES</option>
+</select>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Buttons -->
+
+<div class="flex gap-6 mt-12">
+
+<button
+type="button"
+id="addCase"
+class="w-full bg-green-600 hover:bg-green-700 transition text-white p-4 rounded-xl font-semibold shadow-lg hover:scale-105">
+
+➕ Add Case
+
+</button>
+
+<button
+type="submit"
+class="w-full bg-blue-600 hover:bg-blue-700 transition text-white p-4 rounded-xl font-semibold shadow-lg hover:scale-105">
+
+🚦 Analyze Traffic Rule
+
+</button>
+
+</div>
+
+</form>
+
+
+<!-- Case Preview -->
+
+<div class="mt-12">
+
+<h2 class="font-semibold text-lg mb-3 text-gray-700">
+📋 Added Cases
+</h2>
+
+<pre
+id="caseList"
+class="bg-gray-100 p-6 rounded-xl text-sm whitespace-pre-wrap h-40 overflow-y-auto border shadow-inner"></pre>
+
+</div>
+
+<div
+id="result"
+class="mt-6 text-center text-green-600 font-semibold whitespace-pre-line">
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
