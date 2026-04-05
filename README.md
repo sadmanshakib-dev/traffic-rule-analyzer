@@ -1,13 +1,13 @@
 # 🚦 Traffic Rule Analyzer
 
-A compiler-based system built using **Lex & Yacc**, designed to analyze and validate traffic rules with an integrated **web-based interface** for visualization.
+A compiler-based system built using **Flex & Bison**, designed to analyze and validate traffic rules with an integrated **web-based interface** for visualization.
 
 ---
 
 ## 🧠 Project Overview
 
 The **Traffic Rule Analyzer** is a hybrid system combining compiler design concepts with modern web technologies.
-It parses traffic-related input using **Lex & Yacc**, processes rules through a custom **C-based rule engine**, and displays results via a **Node.js backend** and interactive **frontend UI**.
+It parses traffic-related input using **Flex & Bison**, processes rules through a custom **C-based rule engine**, and displays results via a **Node.js backend** and interactive **frontend UI**.
 
 ---
 
@@ -33,8 +33,8 @@ It parses traffic-related input using **Lex & Yacc**, processes rules through a 
 
 ## ✨ Key Features
 
-* 🧾 Lexical Analysis using **Lex**
-* 🧩 Syntax Parsing using **Yacc**
+* 🧾 Lexical Analysis using **Flex**
+* 🧩 Syntax Parsing using **Bison**
 * ⚙️ Custom Rule Engine in C
 * 📂 Input & Output File Processing
 * 🌐 Web-based Result Visualization
@@ -141,7 +141,7 @@ http://localhost:3000
 
 ## 🎯 Learning Outcomes
 
-* Deep understanding of **Compiler Design (Lex & Yacc)**
+* Deep understanding of **Compiler Design (Flex & Bison)**
 * Backend-Frontend integration
 * Real-world problem solving with C
 * Building full-stack hybrid systems
