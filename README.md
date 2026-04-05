@@ -151,7 +151,7 @@ http://localhost:3000
 ## 👨‍💻 Author
 
 **Sadman Shakib**
-Aspiring Full Stack Developer | CSE Student
+| Aspiring Full Stack Developer | CSE Student
 
 ---
 
