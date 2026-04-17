@@ -18,5 +18,5 @@ extern char zone_type[MAX_STR];
 extern char helmet_status[SMALL_STR];
 extern char time_type[SMALL_STR];
 extern char alcohol_status[SMALL_STR];
-extern char plate_number[20];
+extern char plate_number[50];
 #endif

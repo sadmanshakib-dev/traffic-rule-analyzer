@@ -80,7 +80,7 @@ int yylex();
 /* Global Variables */
 
 char vehicle_type[20];
-char plate_number[20];
+char plate_number[50];
 
 int speed = 0;
 int limit = 0;

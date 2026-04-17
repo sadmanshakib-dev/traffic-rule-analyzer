@@ -7,11 +7,11 @@ static int total_cases = 0;
 static int total_fine_collected = 0;
 
 /* STORE ALL PREVIOUS PLATES */
-static char plate_history[100][20];
+static char plate_history[100][50];
 static int plate_count = 0;
 
 /* PREVIOUS CASE STORAGE (duplicate detection) */
-static char previous_plate[20] = "";
+static char previous_plate[50] = "";
 static int previous_speed = -1;
 static int previous_limit = -1;
 
