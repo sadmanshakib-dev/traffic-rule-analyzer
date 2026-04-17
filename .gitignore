@@ -2,3 +2,12 @@
 node_modules/
 *.exe
 package-lock.json
+.vscode/
+node_modules/
+*.exe
+package-lock.json
+
+# Flex/Bison generated files
+lex.yy.c
+parser.tab.c
+parser.tab.h
