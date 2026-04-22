@@ -7,19 +7,32 @@
 Case ID : 1
 ------------------------------------
 Vehicle : CAR
-Plate   : Dhaka-Metrro-KA-13984
+Plate   : Dhaka-Metrro-KA-12345
 
-Speed   : 60 km/h
-Limit   : 30 km/h
+Speed   : 80 km/h
+Limit   : 60 km/h
 
 Violations
 ----------
-Over Speed in School Zone (30 km/h over) - Fine: 8000 BDT
-Night Driving Extra Charge - Fine: 1000 BDT
-Drunk Driving - Fine: 5000 BDT
-Red Signal Jump - Fine: 2000 BDT
-No Seatbelt - Fine: 2000 BDT
-License Suspended
+Over Speed on Highway (20 km/h over) - Fine: 1500 BDT
 
-Total Fine : 18000 BDT
+Total Fine : 1500 BDT
+------------------------------------
+
+====================================
+Case ID : 2
+------------------------------------
+Vehicle : CAR
+Plate   : Dhaka-Metrro-KA-12345
+
+Speed   : 90 km/h
+Limit   : 80 km/h
+
+Violations
+----------
+Over Speed (10 km/h over) - Fine: 1000 BDT
+Red Signal Jump - Fine: 2000 BDT
+Repeat Offender (Fine +50%)
+
+Total Fine : 4500 BDT
 ------------------------------------
